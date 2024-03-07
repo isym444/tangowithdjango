@@ -1,5 +1,5 @@
 """
-URL configuration for djangoProject project.
+URL configuration for tango_with_django_project project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
@@ -21,6 +21,6 @@ from rango import views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", views.index),
+    path("", views.index, name="index"),
     path("rango/", include("rango.urls")),
 ]
