@@ -1,20 +1,16 @@
-<!DOCTYPE html>
+{% extends 'rango/base.html' %}
 
-<html>
-<head> <title>Rango</title>
-</head>
-<body> <div>
-{% if page %}
-    <h1>{{ page.title }}</h1>
-    <ul>
-        <li>Page views: {{ page.views }}</li>
-    </ul>
-{% else %}
-    The specified page does not exist.
-{% endif %}
-</div>
-<div>
-    <a href="/rango/">Home</a><br />
-</div>
-</body>
-</html>
+{% block title_block %}
+    Rango
+{% endblock %}
+{% block body_block %}
+    {% if page %}
+        <h1>{{ page.title }}</h1>
+        <ul>
+            <li>Page views: {{ page.views }}</li>
+        </ul>
+    {% else %}
+        The specified page does not exist.
+    {% endif %}
+{% endblock %}
+
