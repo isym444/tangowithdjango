@@ -1,7 +1,7 @@
 {% extends 'rango/base.html' %}
 {% load static %}
 {% block title_block %}
-    Rango
+    Homepage
 {% endblock %}
 
 {% block body_block %}
@@ -16,7 +16,7 @@
             <ul>
                 {% for category in categories %}
                     <li>
-{#                        <a href="/rango/category/{{ category.slug }}/">{{ category.name }}</a>#}
+                        {#                        <a href="/rango/category/{{ category.slug }}/">{{ category.name }}</a>#}
                         <a href="{% url 'rango:show_category' category.slug %}"> {{ category.name }}</a>
                     </li>
                 {% endfor %}
@@ -26,12 +26,12 @@
         {% endif %}
     </div>
     <div>
-        {% if pages  %}
+        {% if pages %}
             <h2>Most viewed pages</h2>
             <ul>
                 {% for page in pages %}
                     <li>
-{#                        <a href="/rango/page/{{ page.slug }}">{{ page.title }}</a>#}
+                        {#                        <a href="/rango/page/{{ page.slug }}">{{ page.title }}</a>#}
                         <a href="{% url 'rango:show_page' page.slug %}">{{ page.title }}</a>
                     </li>
                 {% endfor %}

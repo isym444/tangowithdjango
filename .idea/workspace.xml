@@ -5,15 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1fb6ebf5-848e-4475-8d13-7b0469a71174" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/rango/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rango/templatetags/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rango/templatetags/rango_template_tags.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/rango/categories.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/rango/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rango/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/rango/add_category.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rango/add_category.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/rango/add_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rango/add_page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/rango/category.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rango/category.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rango/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rango/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/rango/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rango/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/rango/page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rango/page.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +60,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "run.code.analysis.last.selected.profile": "aDefault",
-    "settings.editor.selected.configurable": "editing.templates",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -173,7 +172,8 @@
       <workItem from="1709821400940" duration="4892000" />
       <workItem from="1709826430165" duration="11988000" />
       <workItem from="1710193545677" duration="11520000" />
-      <workItem from="1710254174036" duration="23386000" />
+      <workItem from="1710254174036" duration="31150000" />
+      <workItem from="1710534829978" duration="8045000" />
     </task>
     <servers />
   </component>
