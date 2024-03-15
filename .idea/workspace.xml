@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1fb6ebf5-848e-4475-8d13-7b0469a71174" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rango/templatetags/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rango/templatetags/rango_template_tags.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/rango/categories.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/rango/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rango/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/rango/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rango/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/rango/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rango/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rango/tests_chapter8.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,7 +166,7 @@
       <workItem from="1709826430165" duration="11988000" />
       <workItem from="1710193545677" duration="11520000" />
       <workItem from="1710254174036" duration="31150000" />
-      <workItem from="1710534829978" duration="8045000" />
+      <workItem from="1710534829978" duration="8213000" />
     </task>
     <servers />
   </component>
