@@ -1,19 +1,21 @@
 from http.client import HTTPResponse
 
+from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.urls import reverse
 
 from rango.models import Category, Page
-from rango.forms import CategoryForm, PageForm
+from rango.forms import CategoryForm, PageForm, UserForm, UserProfileForm
 
 
 # Create your views here.
 def index(request):
-    #context_dict={'boldmessage': 'Crunchy, creamy, cookie, candy, cupcake!','normalmessage':'This is just a normal message'}
-    #html = "Rango says hey there partner!" + '<a href="/rango/about/">About</a>'
-    #return HttpResponse(html)
-    #return render(request, 'rango/index.html', context=context_dict)
+    # context_dict={'boldmessage': 'Crunchy, creamy, cookie, candy, cupcake!','normalmessage':'This is just a normal message'}
+    # html = "Rango says hey there partner!" + '<a href="/rango/about/">About</a>'
+    # return HttpResponse(html)
+    # return render(request, 'rango/index.html', context=context_dict)
 
     # Query the database for a list of ALL categories currently stored.
     # Order the categories by the number of likes in descending order.
@@ -30,9 +32,10 @@ def index(request):
 
 
 def about(request):
-    context_dict = {'test':'here is the about page.'}
-    #return HttpResponse("Rango says here is the about page.<a href='/rango/'>Index</a>")
+    context_dict = {'test': 'here is the about page.'}
+    # return HttpResponse("Rango says here is the about page.<a href='/rango/'>Index</a>")
     return render(request, 'rango/about.html', context=context_dict)
+
 
 def show_category(request, category_name_slug):
     context_dict = {}
@@ -46,6 +49,7 @@ def show_category(request, category_name_slug):
         context_dict['pages'] = None
     return render(request, 'rango/category.html', context=context_dict)
 
+
 def show_page(request, page_name_slug):
     context_dict = {}
     try:
@@ -55,12 +59,13 @@ def show_page(request, page_name_slug):
         context_dict['page'] = None
     return render(request, 'rango/page.html', context=context_dict)
 
+@login_required
 def add_category(request):
     form = CategoryForm()
     # A HTTP POST?
     if request.method == 'POST':
         form = CategoryForm(request.POST)
-                # Have we been provided with a valid form?
+        # Have we been provided with a valid form?
         if form.is_valid():
             # Save the new category to the database.
             form.save(commit=True)
@@ -70,17 +75,17 @@ def add_category(request):
             # The supplied form contained errors -
             # just print them to the terminal.
             print(form.errors)
-    #Will handle the bad form, new form, or no form supplied cases.
+    # Will handle the bad form, new form, or no form supplied cases.
     # Render the form with error messages (if any).
     return render(request, 'rango/add_category.html', {'form': form})
 
-
+@login_required
 def add_page(request, category_name_slug):
     try:
         category = Category.objects.get(slug=category_name_slug)
     except Category.DoesNotExist:
-            category = None
-        # You cannot add a page to a Category that does not exist...
+        category = None
+    # You cannot add a page to a Category that does not exist...
     if category is None:
         return redirect('/rango/')
     form = PageForm()
@@ -88,12 +93,68 @@ def add_page(request, category_name_slug):
         form = PageForm(request.POST)
         if form.is_valid():
             if category:
-                    page = form.save(commit=False)
-                    page.category = category
-                    page.views = 0
-                    page.save()
-                    return redirect(reverse('rango:show_category', kwargs={'category_name_slug': category_name_slug}))
+                page = form.save(commit=False)
+                page.category = category
+                page.views = 0
+                page.save()
+                return redirect(reverse('rango:show_category', kwargs={'category_name_slug': category_name_slug}))
         else:
             print(form.errors)
     context_dict = {'form': form, 'category': category}
     return render(request, 'rango/add_page.html', context=context_dict)
+
+
+def register(request):
+    registered = False
+    if request.method == 'POST':
+        user_form = UserForm(request.POST)
+        profile_form = UserProfileForm(request.POST)
+        if user_form.is_valid() and profile_form.is_valid():
+            user = user_form.save()
+            # Now we hash the password with the set_password method.
+            # Once hashed, we can update the user object.
+            user.set_password(user.password)
+            user.save()
+            profile = profile_form.save(commit=False)
+            profile.user = user
+            if 'picture' in request.FILES:
+                profile.picture = request.FILES['picture']
+            profile.save()
+            registered = True
+        else:
+            print(user_form.errors, profile_form.errors)
+    else:
+        user_form = UserForm()
+        profile_form = UserProfileForm()
+    return render(request, 'rango/register.html',
+                  context={'user_form': user_form, 'profile_form': profile_form, 'registered': registered})
+
+def user_login(request):
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        user = authenticate(username=username, password=password)
+        if user:
+            if user.is_active:
+                login(request, user)
+                return redirect(reverse('rango:index'))
+            else:
+                return HttpResponse("Your Rango account is disabled.")
+        else:
+            print(f"Invalid login details: {username}, {password}")
+            return HttpResponse("Invalid login details supplied.")
+    else:
+        return render(request, 'rango/login.html')
+
+@login_required
+def restricted(request):
+    # return HttpResponse("Since you're logged in, you can see this text!")
+    return render(request, 'rango/restricted.html')
+
+
+@login_required
+def user_logout(request):
+    # Since we know the user is logged in, we can now just log them out.
+    logout(request)
+    # Take the user back to the homepage.
+    return redirect(reverse('rango:index'))

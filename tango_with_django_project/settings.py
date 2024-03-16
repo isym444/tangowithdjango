@@ -24,6 +24,7 @@ STATIC_URL = "/static/"
 MEDIA_DIR = os.path.join(BASE_DIR, 'media')
 MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = '/media/'
+LOGIN_URL = 'rango:login'
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
@@ -39,8 +40,7 @@ ALLOWED_HOSTS = [
     "0.0.0.0",
     "127.0.0.1",
     "[::1]",
-    "testserver",]
-
+    "testserver", ]
 
 # Application definition
 
@@ -64,9 +64,6 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-
-
-
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
@@ -87,7 +84,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "tango_with_django_project.wsgi.application"
 
-
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
@@ -98,7 +94,6 @@ DATABASES = {
     }
 }
 
-
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
@@ -107,7 +102,7 @@ AUTH_PASSWORD_VALIDATORS = [
         "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
     },
     {
-        "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",
+        "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator", "OPTIONS": {"min_length": 6, }
     },
     {
         "NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",
@@ -116,7 +111,6 @@ AUTH_PASSWORD_VALIDATORS = [
         "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
     },
 ]
-
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
