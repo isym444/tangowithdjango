@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1fb6ebf5-848e-4475-8d13-7b0469a71174" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bing.key" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rango/bing_search.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/js/rango-query.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rango/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/rango/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rango/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/rango/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rango/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rango/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rango/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rango/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,7 +174,7 @@
       <workItem from="1710193545677" duration="11520000" />
       <workItem from="1710254174036" duration="31150000" />
       <workItem from="1710534829978" duration="30294000" />
-      <workItem from="1710695440474" duration="16157000" />
+      <workItem from="1710695440474" duration="20214000" />
     </task>
     <servers />
   </component>
