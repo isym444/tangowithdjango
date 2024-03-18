@@ -7,6 +7,7 @@ from django.forms import forms
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.urls import reverse
+from django.views import View
 
 from rango.models import Category, Page
 from rango.forms import CategoryForm, PageForm, UserForm, UserProfileForm
@@ -39,16 +40,24 @@ def index(request):
 
 
 from .forms import ExampleForm
-def about(request):
-    context_dict = {'test': 'here is the about page.'}
-    visitor_cookie_handler(request)
-    context_dict['visits'] = request.session.get('visits',1)
-    context_dict['example_form'] = ExampleForm()
-    # if request.session.test_cookie_worked():
-    #     print("Test cookie worked")
-    #     request.session.delete_test_cookie()
-    # return HttpResponse("Rango says here is the about page.<a href='/rango/'>Index</a>")
-    return render(request, 'rango/about.html', context=context_dict)
+# def about(request):
+#     context_dict = {'test': 'here is the about page.'}
+#     visitor_cookie_handler(request)
+#     context_dict['visits'] = request.session.get('visits',1)
+#     context_dict['example_form'] = ExampleForm()
+#     # if request.session.test_cookie_worked():
+#     #     print("Test cookie worked")
+#     #     request.session.delete_test_cookie()
+#     # return HttpResponse("Rango says here is the about page.<a href='/rango/'>Index</a>")
+#     return render(request, 'rango/about.html', context=context_dict)
+
+class about(View):
+    def get(self, request):
+        context_dict = {'test': 'here is the about page.'}
+        visitor_cookie_handler(request)
+        context_dict['visits'] = request.session.get('visits',1)
+        context_dict['example_form'] = ExampleForm()
+        return render(request, 'rango/about.html', context=context_dict)
 
 
 def show_category(request, category_name_slug):
