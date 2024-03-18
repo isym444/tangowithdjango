@@ -3,6 +3,7 @@ from http.client import HTTPResponse
 
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
+from django.forms import forms
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.urls import reverse
@@ -37,10 +38,12 @@ def index(request):
     return response
 
 
+from .forms import ExampleForm
 def about(request):
     context_dict = {'test': 'here is the about page.'}
     visitor_cookie_handler(request)
     context_dict['visits'] = request.session.get('visits',1)
+    context_dict['example_form'] = ExampleForm()
     # if request.session.test_cookie_worked():
     #     print("Test cookie worked")
     #     request.session.delete_test_cookie()
@@ -206,4 +209,5 @@ def get_server_side_cookie(request, cookie, default_val=None):
     if not val:
         val = default_val
     return val
+
 

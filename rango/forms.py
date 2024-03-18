@@ -55,3 +55,9 @@ class UserProfileForm(forms.ModelForm):
     class Meta:
         model = UserProfile
         fields = ('website', 'picture',)
+
+
+class ExampleForm(forms.Form):
+    name = forms.CharField(label='Your name', max_length=100)
+    email = forms.EmailField(label='Email Address')
+    message = forms.CharField(label='Message', widget=forms.Textarea)

@@ -5,7 +5,12 @@
 {% endblock %}
 {% block body_block %}
     {% if page %}
-        <h1>{{ page.title }}</h1>
+        <div class="jumbotron p-4">
+            <div class="container">
+                <h1 class="jumbotron-heading">{{ page.title }}</h1>
+            </div>
+        </div>
+{#        <h1>{{ page.title }}</h1>#}
         <ul>
             <li>Page views: {{ page.views }}</li>
         </ul>

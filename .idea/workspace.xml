@@ -5,18 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1fb6ebf5-848e-4475-8d13-7b0469a71174" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/static/images/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/rango/base_old.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/registration/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/registration/logout.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/registration/password_change_form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/registration/registration_closed.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/registration/registration_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/tango_with_django_project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/tango_with_django_project.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rango/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/rango/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rango/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/rango/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tango_with_django_project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/tango_with_django_project/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tango_with_django_project/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/tango_with_django_project/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/rango/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rango/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rango/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rango/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rango/add_category.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rango/add_category.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rango/add_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rango/add_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rango/categories.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rango/categories.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rango/category.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rango/category.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rango/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rango/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rango/page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rango/page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/registration/logout.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/logout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/registration/registration_closed.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/registration_closed.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/registration/registration_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/registration_form.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,31 +53,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Django tests.Test: rango.tests_chapter3.executor&quot;: &quot;Run&quot;,
-    &quot;Python.populate_rango.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;chapter11onwards&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/samir/PycharmProjects/tango_with_django_project&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;aDefault&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Django Server.djangoProject.executor": "Run",
+    "Django tests.Test: rango.tests_chapter3.executor": "Run",
+    "Python.populate_rango.executor": "Run",
+    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "chapter11onwards",
+    "last_opened_file_path": "/Users/samir/PycharmProjects/tango_with_django_project",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "aDefault",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;sqlite&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "sqlite"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/static/images" />
@@ -82,7 +88,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.populate_rango">
+  <component name="RunManager" selected="Django Server.djangoProject">
     <configuration name="Test: rango.tests_chapter3" type="DjangoTestsConfigurationType" temporary="true">
       <module name="tango_with_django_project" />
       <option name="ENV_FILES" value="" />
@@ -134,14 +140,16 @@
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="tango_with_django_project.settings" />
       </envs>
       <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.9 (.venv)" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="launchJavascriptDebuger" value="false" />
-      <option name="port" value="8000" />
+      <option name="port" value="5555" />
       <option name="host" value="localhost" />
       <option name="additionalOptions" value="" />
       <option name="browserUrl" value="" />
@@ -178,7 +186,7 @@
       <workItem from="1710193545677" duration="11520000" />
       <workItem from="1710254174036" duration="31150000" />
       <workItem from="1710534829978" duration="30294000" />
-      <workItem from="1710695440474" duration="6002000" />
+      <workItem from="1710695440474" duration="13237000" />
     </task>
     <servers />
   </component>

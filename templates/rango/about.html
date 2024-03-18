@@ -1,13 +1,27 @@
 {% extends 'rango/base.html' %}
+{% load crispy_forms_filters %}
+{% load crispy_forms_tags %}
 {% load static %}
 {% block title_block %}
     About Rango
 
 {% endblock %}
 {% block body_block %}
-    Hey there partner! <br>
+    <div class="jumbotron p-4">
+        <div class="container">
+            <h1 class="jumbotron-heading">Hey there partner!</h1>
+        </div>
+    </div>
+{#    Hey there partner! <br>#}
     Number of visits: {{ visits }}
     <br>
     <p>This tutorial has been put together by Ian Samir Yep Manzano</p>
+
+    <h2>Example Crispy Form</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ example_form|crispy }}
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
     <img src="{{ MEDIA_URL }}cat.jpg" alt="Picture of a Cat.?">
 {% endblock %}
