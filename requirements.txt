@@ -1,0 +1,15 @@
+asgiref==3.7.2
+certifi==2024.2.2
+charset-normalizer==3.3.2
+coverage==7.4.4
+crispy-bootstrap4==2024.1
+Django==4.2.11
+django-crispy-forms==2.1
+django-registration-redux==2.13
+idna==3.6
+Pillow==5.4.1
+pytz==2024.1
+requests==2.31.0
+sqlparse==0.4.4
+typing_extensions==4.10.0
+urllib3==2.2.1
